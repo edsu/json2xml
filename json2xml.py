@@ -28,7 +28,7 @@ def json2xml(filename, tag_name="data"):
     return tostring(doc, encoding='utf-8')
 
 def data2builder(data, tag_name="data", builder=None):
-    """pass in a python datastructure and get back a etree TreeBuilder
+    """pass in a python data structure and get back a etree TreeBuilder
     """
     if builder == None:
         builder = TreeBuilder()
