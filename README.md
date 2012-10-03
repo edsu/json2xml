@@ -30,7 +30,8 @@ and you would like xml for it, get a TreeBuilder for it:
 from json2xml import data2builder
 from xml.etree.ElementTree import tostring
 
-builder = data2builder(data, tag_name="tweet")
+data = {"foo": "bar", "baz": [1, 2, 3]}
+builder = data2builder(data, tag_name="data")
 doc = builder.close()
 print tostring(doc)
 ```
