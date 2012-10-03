@@ -43,6 +43,8 @@ def data2builder(data, tag_name="data", builder=None):
         for key, value in data.items():
             data2builder(value, tag_name=key, builder=builder)
         builder.end(tag_name)
+    else: 
+        raise Exception("uhoh I can't handle type %s" % t)
     return builder
 
 if __name__ == "__main__":
