@@ -2,7 +2,9 @@ json2xml
 ========
 
 A simplistic JSON to XML converter, created mainly as a way to kill time
-one evening after a tweet from @pbinkley.
+one evening after a tweet from @pbinkley. Yes you are allowed to ask 
+why would you want to convert JSON to XML. No, I'm not going to provide
+an answer :-)
 
 Example
 -------
@@ -26,6 +28,9 @@ and you would like xml for it, get a TreeBuilder for it:
 ```python
 
 from json2xml import data2builder
+from xml.etree.ElementTree import tostring
 
 builder = json2builder(data, tag_name="tweet")
+doc = builder.close()
+print tostring(doc)
 ```
