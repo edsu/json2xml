@@ -37,6 +37,9 @@ def data2builder(data, tag_name="data", builder=None):
         builder.start(tag_name, {})
         builder.data(unicode(data))
         builder.end(tag_name)
+    elif t == NoneType:
+        builder.start(tag_name, {})
+        builder.end(tag_name)
     elif t in (ListType, TupleType):
         for value in data:
             data2builder(value, tag_name=tag_name, builder=builder)
@@ -44,9 +47,6 @@ def data2builder(data, tag_name="data", builder=None):
         builder.start(tag_name, {})
         for key, value in data.items():
             data2builder(value, tag_name=key, builder=builder)
-        builder.end(tag_name)
-    elif t == NoneType:
-        builder.start(tag_name, {})
         builder.end(tag_name)
     else: 
         raise Exception("uhoh I can't handle type %s" % t)
