@@ -4,7 +4,7 @@ json2xml
 A simplistic JSON to XML converter, created mainly as a way to kill time
 one evening after a
 [tweet](https://twitter.com/pabinkley/status/253279453738835969)
-from @pbinkley. Yes you are entitled to ask why I would ever want to 
+from @pbinkley. Yes, you are entitled to ask why I would ever want to 
 convert JSON to XML. No, I'm not going to provide an answer :-)
 
 Example
