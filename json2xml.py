@@ -46,6 +46,9 @@ def data2xml(data, tag_name="data", builder=None):
     return builder
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print "usage: ./json2xml.py <json_filename> [tagname]"
+        sys.exit(1)
     filename = sys.argv[1]
-    tag_name = len(sys.argv) > 1 ? sys.argv[2] : "data"
+    tag_name = sys.argv[2] if len(sys.argv) > 2 else "data"
     print json2xml(filename, tag_name=tag_name)
