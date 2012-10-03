@@ -2,10 +2,14 @@
 <tweet>
   <favorited>False</favorited>
   <in_reply_to_user_id>22643508</in_reply_to_user_id>
+  <contributors/>
   <truncated>False</truncated>
   <text>@pabinkley I'm not opposed to using XML, especially if it's your tool of choice, but I am kind of biased I guess http://t.co/7jVKnpVa</text>
   <created_at>Wed Oct 03 00:02:12 +0000 2012</created_at>
   <retweeted>False</retweeted>
+  <in_reply_to_status_id>253281702221328384</in_reply_to_status_id>
+  <coordinates/>
+  <id>253283774203322368</id>
   <entities>
     <user_mentions>
       <indices>0</indices>
@@ -42,6 +46,7 @@
           <url>http://inkdroid.org</url>
           <indices>0</indices>
           <indices>19</indices>
+          <expanded_url/>
         </urls>
       </url>
       <description/>
@@ -75,7 +80,9 @@
     <following>False</following>
     <listed_count>208</listed_count>
   </user>
+  <place/>
   <retweet_count>0</retweet_count>
+  <geo/>
   <in_reply_to_user_id_str>22643508</in_reply_to_user_id_str>
   <possibly_sensitive>False</possibly_sensitive>
   <source>web</source>

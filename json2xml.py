@@ -14,6 +14,8 @@ or from a program:
 
 import sys
 import json
+
+from types import *
 from xml.etree.ElementTree import TreeBuilder, tostring
 
 def json2xml(filename, tag_name="data"):
@@ -31,17 +33,20 @@ def data2builder(data, tag_name="data", builder=None):
     if builder == None:
         builder = TreeBuilder()
     t = type(data)
-    if t in (str, unicode, int, float, bool):
+    if t in (StringType, UnicodeType, IntType, FloatType, BooleanType, LongType):
         builder.start(tag_name, {})
         builder.data(unicode(data))
         builder.end(tag_name)
-    elif t == list:
+    elif t == ListType:
         for value in data:
             data2builder(value, tag_name=tag_name, builder=builder)
-    elif t == dict:
+    elif t == DictionaryType:
         builder.start(tag_name, {})
         for key, value in data.items():
             data2builder(value, tag_name=key, builder=builder)
+        builder.end(tag_name)
+    elif t == NoneType:
+        builder.start(tag_name, {})
         builder.end(tag_name)
     else: 
         raise Exception("uhoh I can't handle type %s" % t)
