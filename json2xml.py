@@ -33,12 +33,12 @@ def data2builder(data, tag_name="data", builder=None):
     if builder == None:
         builder = TreeBuilder()
     t = type(data)
-    if t in (StringType, UnicodeType, IntType, FloatType, BooleanType, LongType):
+    if t == NoneType:
+        builder.start(tag_name, {})
+        builder.end(tag_name)
+    elif t in (StringType, UnicodeType, IntType, FloatType, BooleanType, LongType):
         builder.start(tag_name, {})
         builder.data(unicode(data))
-        builder.end(tag_name)
-    elif t == NoneType:
-        builder.start(tag_name, {})
         builder.end(tag_name)
     elif t in (ListType, TupleType):
         for value in data:
