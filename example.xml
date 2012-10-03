@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<tweet>
+  <favorited>False</favorited>
+  <in_reply_to_user_id>22643508</in_reply_to_user_id>
+  <truncated>False</truncated>
+  <text>@pabinkley I'm not opposed to using XML, especially if it's your tool of choice, but I am kind of biased I guess http://t.co/7jVKnpVa</text>
+  <created_at>Wed Oct 03 00:02:12 +0000 2012</created_at>
+  <retweeted>False</retweeted>
+  <entities>
+    <user_mentions>
+      <indices>0</indices>
+      <indices>10</indices>
+      <screen_name>pabinkley</screen_name>
+      <id>22643508</id>
+      <name>Peter Binkley</name>
+      <id_str>22643508</id_str>
+    </user_mentions>
+    <urls>
+      <url>http://t.co/7jVKnpVa</url>
+      <indices>113</indices>
+      <indices>133</indices>
+      <expanded_url>http://inkdroid.org/journal/2012/04/30/lessons-of-json/</expanded_url>
+      <display_url>inkdroid.org/journal/2012/0&#x2026;</display_url>
+    </urls>
+  </entities>
+  <in_reply_to_status_id_str>253281702221328384</in_reply_to_status_id_str>
+  <id_str>253283774203322368</id_str>
+  <in_reply_to_screen_name>pabinkley</in_reply_to_screen_name>
+  <user>
+    <follow_request_sent>False</follow_request_sent>
+    <profile_use_background_image>True</profile_use_background_image>
+    <id>14331818</id>
+    <verified>False</verified>
+    <profile_text_color>333333</profile_text_color>
+    <profile_image_url_https>https://si0.twimg.com/profile_images/2621994425/dkymdierz3620yss89gn_normal.jpeg</profile_image_url_https>
+    <profile_sidebar_fill_color>DDEEF6</profile_sidebar_fill_color>
+    <is_translator>False</is_translator>
+    <geo_enabled>True</geo_enabled>
+    <entities>
+      <url>
+        <urls>
+          <url>http://inkdroid.org</url>
+          <indices>0</indices>
+          <indices>19</indices>
+        </urls>
+      </url>
+      <description/>
+    </entities>
+    <followers_count>1937</followers_count>
+    <protected>False</protected>
+    <location>Silver Spring, MD</location>
+    <default_profile_image>False</default_profile_image>
+    <id_str>14331818</id_str>
+    <utc_offset>-18000</utc_offset>
+    <statuses_count>9247</statuses_count>
+    <description>hacker for libraries</description>
+    <friends_count>413</friends_count>
+    <profile_link_color>0084B4</profile_link_color>
+    <profile_image_url>http://a0.twimg.com/profile_images/2621994425/dkymdierz3620yss89gn_normal.jpeg</profile_image_url>
+    <notifications>False</notifications>
+    <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/410205603/tea.jpg</profile_background_image_url_https>
+    <profile_background_color>C0DEED</profile_background_color>
+    <profile_background_image_url>http://a0.twimg.com/profile_background_images/410205603/tea.jpg</profile_background_image_url>
+    <name>Ed Summers</name>
+    <lang>en</lang>
+    <profile_background_tile>False</profile_background_tile>
+    <favourites_count>771</favourites_count>
+    <screen_name>edsu</screen_name>
+    <url>http://inkdroid.org</url>
+    <created_at>Tue Apr 08 12:43:41 +0000 2008</created_at>
+    <contributors_enabled>False</contributors_enabled>
+    <time_zone>Quito</time_zone>
+    <profile_sidebar_border_color>C0DEED</profile_sidebar_border_color>
+    <default_profile>False</default_profile>
+    <following>False</following>
+    <listed_count>208</listed_count>
+  </user>
+  <retweet_count>0</retweet_count>
+  <in_reply_to_user_id_str>22643508</in_reply_to_user_id_str>
+  <possibly_sensitive>False</possibly_sensitive>
+  <source>web</source>
+</tweet>
