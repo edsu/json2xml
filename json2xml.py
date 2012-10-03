@@ -21,11 +21,11 @@ def json2xml(filename, tag_name="data"):
     name for the a root element, and get back some XML for the JSON.
     """
     json_data = json.loads(open(filename).read())
-    builder = data2xml(json_data, tag_name=tag_name)
+    builder = data2builder(json_data, tag_name=tag_name)
     doc = builder.close()
     return tostring(doc, encoding='utf-8')
 
-def data2xml(data, tag_name="data", builder=None):
+def data2builder(data, tag_name="data", builder=None):
     """pass in a python datastructure and get back a etree TreeBuilder
     """
     if builder == None:
@@ -37,11 +37,11 @@ def data2xml(data, tag_name="data", builder=None):
         builder.end(tag_name)
     elif t == list:
         for value in data:
-            data2xml(value, tag_name=tag_name, builder=builder)
+            data2builder(value, tag_name=tag_name, builder=builder)
     elif t == dict:
         builder.start(tag_name, {})
         for key, value in data.items():
-            data2xml(value, tag_name=key, builder=builder)
+            data2builder(value, tag_name=key, builder=builder)
         builder.end(tag_name)
     return builder
 

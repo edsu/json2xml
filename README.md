@@ -20,3 +20,12 @@ from json2xml import json2xml
 print json2xml("tweet.json", tag_name="tweet")
 ``` 
 
+Or if you have a python data structure created by something like json.loads
+and you would like xml for it, get a TreeBuilder for it:
+
+```python
+
+from json2xml import data2builder
+
+builder = json2builder(data, tag_name="tweet")
+```
