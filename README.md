@@ -6,5 +6,5 @@ A simplistic JSON to XML converter.
 Example
 -------
 
-    % ./example.py | xmlling --format - > example.xml
+    % ./json2xml.py tweet.json | xmllint --format - > tweet.xml
 
