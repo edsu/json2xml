@@ -37,7 +37,7 @@ def data2builder(data, tag_name="data", builder=None):
         builder.start(tag_name, {})
         builder.data(unicode(data))
         builder.end(tag_name)
-    elif t == ListType:
+    elif t in (ListType, TupleType):
         for value in data:
             data2builder(value, tag_name=tag_name, builder=builder)
     elif t == DictionaryType:
