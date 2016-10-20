@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
 Call json2xml from the command line:
@@ -18,11 +18,10 @@ import json
 from types import *
 from xml.etree.ElementTree import TreeBuilder, tostring
 
-def json2xml(filename, tag_name="data"):
+def json2xml(json_data, tag_name="data"):
     """pass in the path to a JSON filename, and an optional tag 
     name for the a root element, and get back some XML for the JSON.
     """
-    json_data = json.loads(open(filename).read())
     builder = data2builder(json_data, tag_name=tag_name)
     doc = builder.close()
     return tostring(doc, encoding='utf-8')
@@ -54,8 +53,10 @@ def data2builder(data, tag_name="data", builder=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print "usage: ./json2xml.py <json_filename> [tagname]"
-        sys.exit(1)
-    filename = sys.argv[1]
-    tag_name = sys.argv[2] if len(sys.argv) > 2 else "data"
-    print json2xml(filename, tag_name=tag_name)
+        json_data = json.loads(sys.stdin.read())
+        tag_name = "data"
+    else:
+        filename = sys.argv[1]
+        json_data = json.loads(open(filename).read())
+        tag_name = sys.argv[2] if len(sys.argv) > 2 else "data"
+    print json2xml(json_data, tag_name=tag_name)
